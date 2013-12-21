@@ -1,5 +1,5 @@
 /*
- * @(#)TqqOAuth2Test.java $version 2013年12月21日
+ * @(#)TqqUserTest.java $version 2013年12月21日
  *
  * Copyright 2013 DaLian Software. All rights Reserved.
  * DaLian Software PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
@@ -17,27 +17,21 @@ import com.tqq.api.test.AbstractTest;
 
 /**
  * DaLian Software t-qq-api
- * com.tqq.api.TqqOAuth2Test.java
+ * com.tqq.api.TqqUserTest.java
  * @author cuizuoli
  * @date 2013年12月21日
  */
-public class TqqOAuth2Test extends AbstractTest {
+public class TqqUserTest extends AbstractTest {
 
 	@Resource
 	private Map<String, String> dataMap;
 
 	@Resource
-	private TqqOAuth2 tqqOAuth2;
+	private TqqUser tqqUser;
 
 	@Test
-	public void authorize() {
-		tqqOAuth2.authorize("test");
-	}
-
-	@Test
-	public void accessToken() {
-		String code = "44be6200af9e13bd1a8b3a98ccd08041";
-		tqqOAuth2.accessToken(code, "test");
+	public void otherInfo() {
+		tqqUser.otherInfo("china394337002", dataMap.get("accessToken"), dataMap.get("openid"));
 	}
 
 }

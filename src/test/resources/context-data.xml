@@ -14,8 +14,7 @@
 	http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 
 	<util:map id="dataMap">
-		<entry key="userId" value="417584133"></entry>
-		<entry key="screenName" value="风平浪静"></entry>
+		<entry key="openid" value="6f92b7956d732139a87c12a8349c0732"></entry>
 		<entry key="accessToken" value="c168490f4ae1a69ddf4cf9383808ba54"/>
 	</util:map>
 
