@@ -33,9 +33,9 @@ public class TqqErrorCodeHandler {
 	public TqqErrorCode handle(HttpStatusCodeException error) {
 		ObjectMapper objectMapper = new ObjectMapper();
 		TqqErrorCode errorCode = new TqqErrorCode();
-		errorCode.setRequest(StringUtils.EMPTY);
-		errorCode.setErrorCode(error.getStatusCode().toString());
-		errorCode.setError(error.getStatusText());
+		errorCode.setRet(StringUtils.EMPTY);
+		errorCode.setErrcode(error.getStatusCode().toString());
+		errorCode.setMsg(error.getStatusText());
 		try {
 			errorCode = objectMapper.readValue(error.getResponseBodyAsByteArray(), TqqErrorCode.class);
 		} catch (JsonParseException e) {

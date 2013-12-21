@@ -7,8 +7,6 @@
 
 package com.tqq.model;
 
-import org.codehaus.jackson.annotate.JsonProperty;
-
 import lombok.Data;
 
 /**
@@ -19,10 +17,9 @@ import lombok.Data;
  */
 @Data
 public class TqqErrorCode {
-	private String request;
-	private String error;
-	@JsonProperty("error_code")
-	private String errorCode;
-	@JsonProperty("message_code")
-	private String messageCode;
+	private String data;
+	private String errcode;
+	private String msg;
+	private String ret;
+	private String seqid;
 }

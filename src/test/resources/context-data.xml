@@ -14,9 +14,9 @@
 	http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 
 	<util:map id="dataMap">
-		<entry key="userId" value="7618256565507084136"></entry>
-		<entry key="screenName" value="cuizuoli"></entry>
-		<entry key="accessToken" value="41cbccc5266c876afa92bb3d63ef7108"/>
+		<entry key="userId" value="417584133"></entry>
+		<entry key="screenName" value="风平浪静"></entry>
+		<entry key="accessToken" value="c168490f4ae1a69ddf4cf9383808ba54"/>
 	</util:map>
 
 </beans>

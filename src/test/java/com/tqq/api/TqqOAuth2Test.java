@@ -7,6 +7,8 @@
 
 package com.tqq.api;
 
+import java.util.Map;
+
 import javax.annotation.Resource;
 
 import org.junit.Test;
@@ -22,11 +24,20 @@ import com.tqq.api.test.AbstractTest;
 public class TqqOAuth2Test extends AbstractTest {
 
 	@Resource
+	private Map<String, String> dataMap;
+
+	@Resource
 	private TqqOAuth2 tqqOAuth2;
 
 	@Test
 	public void authorize() {
 		tqqOAuth2.authorize("test");
+	}
+
+	@Test
+	public void accessToken() {
+		String code = "479b1d83b0879ea88ad4f866102cc282";
+		tqqOAuth2.accessToken(code, "test");
 	}
 
 }
