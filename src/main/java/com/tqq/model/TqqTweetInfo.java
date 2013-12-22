@@ -34,7 +34,7 @@ public class TqqTweetInfo {
 	private String fromUrl;
 	private String geo;
 	private String id;
-	private String image;
+	private String[] image;
 	private String latitude;
 	private String location;
 	private String longitude;
