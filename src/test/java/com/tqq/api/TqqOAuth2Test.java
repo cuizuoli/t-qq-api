@@ -37,7 +37,7 @@ public class TqqOAuth2Test extends AbstractTest {
 	@Test
 	public void accessToken() {
 		String code = "44be6200af9e13bd1a8b3a98ccd08041";
-		tqqOAuth2.accessToken(code, "test");
+		tqqOAuth2.accessToken(code);
 	}
 
 }

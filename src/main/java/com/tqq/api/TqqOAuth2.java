@@ -69,14 +69,13 @@ public class TqqOAuth2 {
 	 * @param state
 	 * @return
 	 */
-	public TqqAccessToken accessToken(String code, String state) {
+	public TqqAccessToken accessToken(String code) {
 		MultiValueMap<String, Object> map = new LinkedMultiValueMap<String, Object>();
 		map.add("client_id", appKey);
 		map.add("client_secret", appSecret);
 		map.add("grant_type", "authorization_code");
 		map.add("code", code);
 		map.add("redirect_uri", redirectUri);
-		map.add("state", state);
 		String result = tqqHttpClient.postForm(OAUTH2_ACCESS_TOKEN, map, String.class);
 		TqqAccessToken tqqAccessToken = new TqqAccessToken();
 		for (String kv : StringUtils.split(result, "&")) {
