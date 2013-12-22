@@ -7,6 +7,8 @@
 
 package com.tqq.model;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 import lombok.Data;
 
 /**
@@ -17,9 +19,11 @@ import lombok.Data;
  */
 @Data
 public class TqqEdu {
-	private int departmentid;
+	@JsonProperty("departmentid")
+	private int departmentId;
 	private int id;
 	private int level;
-	private int schoolid;
+	@JsonProperty("schoolid")
+	private int schoolId;
 	private int year;
 }

@@ -1,5 +1,5 @@
 /*
- * @(#)TqqUserTest.java $version 2013年12月21日
+ * @(#)TqqUsersTest.java $version 2013年12月22日
  *
  * Copyright 2013 DaLian Software. All rights Reserved.
  * DaLian Software PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
@@ -17,21 +17,21 @@ import com.tqq.api.test.AbstractTest;
 
 /**
  * DaLian Software t-qq-api
- * com.tqq.api.TqqUserTest.java
+ * com.tqq.api.TqqUsersTest.java
  * @author cuizuoli
- * @date 2013年12月21日
+ * @date 2013年12月22日
  */
-public class TqqUserTest extends AbstractTest {
+public class TqqUsersTest extends AbstractTest {
 
 	@Resource
 	private Map<String, String> dataMap;
 
 	@Resource
-	private TqqUser tqqUser;
+	private TqqUsers tqqUsers;
 
 	@Test
 	public void otherInfo() {
-		tqqUser.otherInfo("china394337002", dataMap.get("accessToken"), dataMap.get("openid"));
+		tqqUsers.otherInfo("china394337002", dataMap.get("accessToken"), dataMap.get("openid"));
 	}
 
 }

@@ -7,19 +7,11 @@
 
 package com.tqq.handler;
 
-import java.io.IOException;
-
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.exception.ExceptionUtils;
-import org.codehaus.jackson.JsonParseException;
-import org.codehaus.jackson.map.JsonMappingException;
-import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpStatusCodeException;
 
 import com.tqq.model.TqqErrorCode;
-
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * DaLian Software t-qq-api
@@ -27,24 +19,13 @@ import lombok.extern.slf4j.Slf4j;
  * @author cuizuoli
  * @date 2013年12月21日
  */
-@Slf4j
 @Component
 public class TqqErrorCodeHandler {
 	public TqqErrorCode handle(HttpStatusCodeException error) {
-		ObjectMapper objectMapper = new ObjectMapper();
 		TqqErrorCode errorCode = new TqqErrorCode();
 		errorCode.setRet(StringUtils.EMPTY);
 		errorCode.setErrcode(error.getStatusCode().toString());
 		errorCode.setMsg(error.getStatusText());
-		try {
-			errorCode = objectMapper.readValue(error.getResponseBodyAsByteArray(), TqqErrorCode.class);
-		} catch (JsonParseException e) {
-			log.error(ExceptionUtils.getFullStackTrace(e));
-		} catch (JsonMappingException e) {
-			log.error(ExceptionUtils.getFullStackTrace(e));
-		} catch (IOException e) {
-			log.error(ExceptionUtils.getFullStackTrace(e));
-		}
 		return errorCode;
 	}
 }
