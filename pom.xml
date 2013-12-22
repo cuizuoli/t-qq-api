@@ -4,7 +4,7 @@
 	<groupId>com.tqq</groupId>
 	<artifactId>t-qq-api</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1-ALPHA</version>
+	<version>0.1-BETA</version>
 	<name>t-qq-api</name>
 	<url>http://t.qq.com/</url>
 	<properties>
