@@ -30,6 +30,11 @@ public class TqqUsersTest extends AbstractTest {
 	private TqqUsers tqqUsers;
 
 	@Test
+	public void info() {
+		tqqUsers.info(dataMap.get("accessToken"), dataMap.get("openid"));
+	}
+
+	@Test
 	public void otherInfo() {
 		tqqUsers.otherInfo("1200AE49E8B5C82ECF1E7DD37E6FBE8D", dataMap.get("accessToken"), dataMap.get("openid"));
 	}
