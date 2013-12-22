@@ -19,7 +19,6 @@ import lombok.Data;
  */
 @Data
 public class TqqAccessToken {
-	private String uid;
 	@JsonProperty("expires_in")
 	private String expiresIn;
 	@JsonProperty("refresh_token")

@@ -101,6 +101,7 @@ public class TqqOAuth2 {
 				tqqAccessToken.setState(StringUtils.substringAfter(kv, "state="));
 			}
 		}
+		log.info(tqqAccessToken.toString());
 		return tqqAccessToken;
 	}
 
