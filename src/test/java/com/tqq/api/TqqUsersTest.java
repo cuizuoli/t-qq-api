@@ -31,7 +31,12 @@ public class TqqUsersTest extends AbstractTest {
 
 	@Test
 	public void otherInfo() {
-		tqqUsers.otherInfo("china394337002", dataMap.get("accessToken"), dataMap.get("openid"));
+		tqqUsers.otherInfo("1200AE49E8B5C82ECF1E7DD37E6FBE8D", dataMap.get("accessToken"), dataMap.get("openid"));
+	}
+
+	@Test
+	public void otherInfoByName() {
+		tqqUsers.otherInfoByName("china394337002", dataMap.get("accessToken"), dataMap.get("openid"));
 	}
 
 }
