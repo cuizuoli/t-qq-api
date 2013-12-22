@@ -38,7 +38,7 @@ import lombok.extern.slf4j.Slf4j;
 public class TqqHttpClient {
 
 	@Resource
-	private RestTemplate restTemplate;
+	private RestTemplate tqqRestTemplate;
 
 	@Resource
 	private TqqErrorCodeHandler tqqErrorCodeHandler;
@@ -89,7 +89,7 @@ public class TqqHttpClient {
 			HttpHeaders headers = new HttpHeaders();
 			headers.setContentType(mediaType);
 			HttpEntity<? extends Object> httpEntity = new HttpEntity<Object>(request, headers);
-			result = restTemplate.postForObject(url, httpEntity, responseType);
+			result = tqqRestTemplate.postForObject(url, httpEntity, responseType);
 			log.info("result : " + result.toString());
 		} catch (HttpStatusCodeException e) {
 			TqqErrorCode t163ErrorCode = tqqErrorCodeHandler.handle(e);
@@ -123,7 +123,7 @@ public class TqqHttpClient {
 				url += getBody(request);
 			}
 			log.info("api - get: " + url);
-			result = restTemplate.getForObject(url, responseType);
+			result = tqqRestTemplate.getForObject(url, responseType);
 			log.info("result : " + result.toString());
 		} catch (HttpStatusCodeException e) {
 			TqqErrorCode t163ErrorCode = tqqErrorCodeHandler.handle(e);
